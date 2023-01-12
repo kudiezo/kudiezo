@@ -1,11 +1,15 @@
 ## 👋 Hi, I'm @kudiezo
 * Nerd
 * Tecnologies student and lover
+
 ***
+
 ### 🌱 - My Programming Languages and other skills
 - [X] **_Current skills_** 
 - [ ] **_Learning_**
+
 ***
+
 - [X] Java
 - [X] PHP
     - [ ] Laravel
