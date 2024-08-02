@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+$title-font: "Montserrat", sans-serif;
+$text-font: "Open Sans", serif;
+$title-color: #00e5fc;
+
+body {
+    background-color: #2222ff;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 550px auto;
+   
+    section {
+        margin: 5px;
+        
+        figure {
+            background-color: $title-color;
+            margin: 20px auto;
+            width: 300px;
+            padding: 0 20px;
+            border-radius: 50px;
+
+            img {
+                width: 100%;
+                padding: 0px;
+                margin: 0;
+                position: relative;
+            }
+        }
+
+        article {   
+            padding: 20px;
+            
+            h2 {
+                font: {
+                    family: $text-font;
+                    size: 3em;
+                }
+                margin: 0;
+                color: rgb(29, 12, 105);
+                span {
+                    text-decoration: underline;
+                }
+            }
+            h1 {
+                font: {
+                    family: $title-font;
+                    size: 6em;
+                    weight: 700;
+                }
+                color: $title-color;
+                margin: 0;
+            }
+        }
+    }
+  
+}

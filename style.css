@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+body {
+  background-color: #2222ff;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 550px auto;
+}
+#container section {
+  margin: 5px;
+}
+#container section figure {
+  background-color: #00e5fc;
+  margin: 20px auto;
+  width: 300px;
+  padding: 0 20px;
+  border-radius: 50px;
+}
+#container section figure img {
+  width: 100%;
+  padding: 0px;
+  margin: 0;
+  position: relative;
+}
+#container section article {
+  padding: 20px;
+}
+#container section article h2 {
+  font-family: "Open Sans", serif;
+  font-size: 3em;
+  margin: 0;
+  color: rgb(29, 12, 105);
+}
+#container section article h2 span {
+  text-decoration: underline;
+}
+#container section article h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 6em;
+  font-weight: 700;
+  color: #00e5fc;
+  margin: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
