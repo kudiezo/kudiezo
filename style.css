@@ -77,11 +77,31 @@ header #right-nav {
   color: white;
   font-family: "Open Sans", serif;
   font-size: 1.3em;
-  margin-top: -20px;
+  margin-top: 10px;
   width: 650px;
 }
 #container section article p strong {
   color: #00e5fc;
+}
+#container section article div {
+  margin-top: 30px;
+}
+#container section article div a {
+  color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 25px;
+  padding: 12px;
+  text-decoration: none;
+  font-family: "Open Sans", serif;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+#container section article div a:hover {
+  background-color: white;
+  border-color: white;
+  color: rgb(29, 12, 105);
+  transition: 0.5s;
 }
 
 /*# sourceMappingURL=style.css.map */

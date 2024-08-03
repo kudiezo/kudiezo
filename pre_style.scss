@@ -98,10 +98,35 @@ header {
                     family: $text-font;
                     size: 1.3em;
                 }
-                margin-top: -20px;
+                margin-top: 10px;
                 width: 650px;
                 strong {
                     color: $title-color;
+                }
+            }
+            div {
+                margin-top: 30px;
+                
+                a {
+                    color: white;
+                    border: {
+                        style: solid;
+                        width: 2px;
+                        radius: 25px;
+                    }
+                    padding: 12px;
+                    text-decoration: none;
+                    font: {
+                        family: $text-font;
+                        size: 1.1em;
+                        weight: bold;
+                    }
+                    &:hover {
+                        background-color: white;
+                        border-color: white;
+                        color: rgb(29, 12, 105);
+                        transition: .5s;
+                    }
                 }
             }
         }
