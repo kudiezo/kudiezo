@@ -8,6 +8,45 @@ body {
     background-color: #2222ff;
 }
 
+header {
+    width: 1150px;
+    height: 50px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: auto auto;
+
+    nav {
+        ul {
+            list-style: none;
+            padding: 0;
+            
+            li {
+                display: inline-block;
+                margin: auto 5px;
+
+                a{
+                    text-decoration: none;
+                    padding: 7px;
+                    color: white;
+                    
+                    font: {
+                        family: $text-font;
+                        weight: bold;
+                    }
+                }
+                a:hover {
+                    color: $title-color;
+                    text-decoration: 2px underline wavy;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+    #right-nav {
+        text-align: right;
+    }
+}
+
 #container {
     display: grid;
     grid-template-columns: 550px auto;
@@ -47,11 +86,23 @@ body {
             h1 {
                 font: {
                     family: $title-font;
-                    size: 6em;
+                    size: 5em;
                     weight: 700;
                 }
                 color: $title-color;
                 margin: 0;
+            }
+            p {
+                color: white;
+                font: {
+                    family: $text-font;
+                    size: 1.3em;
+                }
+                margin-top: -20px;
+                width: 650px;
+                strong {
+                    color: $title-color;
+                }
             }
         }
     }

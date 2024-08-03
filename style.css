@@ -3,6 +3,37 @@ body {
   background-color: #2222ff;
 }
 
+header {
+  width: 1150px;
+  height: 50px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+header nav ul li {
+  display: inline-block;
+  margin: auto 5px;
+}
+header nav ul li a {
+  text-decoration: none;
+  padding: 7px;
+  color: white;
+  font-family: "Open Sans", serif;
+  font-weight: bold;
+}
+header nav ul li a:hover {
+  color: #00e5fc;
+  text-decoration: 2px underline wavy;
+  transition: 0.3s;
+}
+header #right-nav {
+  text-align: right;
+}
+
 #container {
   display: grid;
   grid-template-columns: 550px auto;
@@ -37,10 +68,20 @@ body {
 }
 #container section article h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 6em;
+  font-size: 5em;
   font-weight: 700;
   color: #00e5fc;
   margin: 0;
+}
+#container section article p {
+  color: white;
+  font-family: "Open Sans", serif;
+  font-size: 1.3em;
+  margin-top: -20px;
+  width: 650px;
+}
+#container section article p strong {
+  color: #00e5fc;
 }
 
 /*# sourceMappingURL=style.css.map */
