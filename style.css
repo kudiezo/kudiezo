@@ -3,10 +3,28 @@ body {
   background-color: #2222ff;
 }
 
+#container section article div a, header nav ul li .dropdown a.button {
+  color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 25px;
+  padding: 12px;
+  text-decoration: none;
+  font-family: "Open Sans", serif;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+#container section article div a:hover, header nav ul li .dropdown a.button:hover {
+  background-color: white;
+  border-color: white;
+  color: rgb(29, 12, 105);
+  transition: 0.5s;
+}
+
 header {
   width: 1150px;
   height: 50px;
-  margin: 20px auto;
+  margin: 20px auto 5px auto;
   display: grid;
   grid-template-columns: auto auto;
 }
@@ -29,6 +47,38 @@ header nav ul li a:hover {
   color: #00e5fc;
   text-decoration: 2px underline wavy;
   transition: 0.3s;
+}
+header nav ul li .dropdown {
+  position: relative;
+  display: block;
+}
+header nav ul li .dropdown:hover .dropdown-content {
+  display: block;
+}
+header nav ul li .dropdown a.button:hover {
+  text-decoration: none;
+  transition: 0s;
+}
+header nav ul li .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(249, 249, 249, 0.5411764706);
+  min-width: 25px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-top: 15px;
+  border-radius: 20px;
+  right: 0;
+}
+header nav ul li .dropdown .dropdown-content a {
+  color: #1d0c69;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-radius: 20px;
+  display: block;
+}
+header nav ul li .dropdown .dropdown-content a:hover {
+  background-color: rgba(241, 241, 241, 0.6509803922);
 }
 header #right-nav {
   text-align: right;
@@ -85,23 +135,6 @@ header #right-nav {
 }
 #container section article div {
   margin-top: 30px;
-}
-#container section article div a {
-  color: white;
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 25px;
-  padding: 12px;
-  text-decoration: none;
-  font-family: "Open Sans", serif;
-  font-size: 1.1em;
-  font-weight: bold;
-}
-#container section article div a:hover {
-  background-color: white;
-  border-color: white;
-  color: rgb(29, 12, 105);
-  transition: 0.5s;
 }
 
 /*# sourceMappingURL=style.css.map */
