@@ -111,14 +111,16 @@ header {
 
 #container {
     display: grid;
-    grid-template-columns: 550px auto;
+    grid-template-columns: 350px auto;
+    width: 1150px;
+    margin: auto;
    
     section {
         margin: 5px;
         
         figure {
             background-color: $title-color;
-            margin: 20px auto;
+            margin: 20px 0;
             width: 300px;
             padding: 0 20px;
             border-radius: 50px;
@@ -132,7 +134,7 @@ header {
         }
 
         article {   
-            padding: 20px;
+            padding: 20px 0 10px 100px;
             
             h2 {
                 font: {
@@ -161,7 +163,6 @@ header {
                     size: 1.3em;
                 }
                 margin-top: 10px;
-                width: 650px;
                 strong {
                     color: $title-color;
                 }
@@ -176,4 +177,16 @@ header {
         }
     }
   
+}
+
+footer {
+    color: white;
+    font-family: $text-font;
+    p {
+        font-size: 9pt;
+        margin: 0;
+    }
+    a {
+        color: black;
+    }
 }
