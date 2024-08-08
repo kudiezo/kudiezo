@@ -170,6 +170,9 @@ header {
                 margin: 0;
                 position: relative;
             }
+            figcaption {
+                display: none;
+            }
             &.dark-theme {
                 background-color: $dark-title-color;
             }
