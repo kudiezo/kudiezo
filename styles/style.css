@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 body {
-  background-color: #2222ff;
+  background-color: #fff;
+  margin: 0;
 }
 
 #container section article div a, header nav ul li .dropdown a.button {
@@ -21,12 +22,30 @@ body {
   transition: 0.5s;
 }
 
+#website-settings {
+  background-color: #2222ff;
+  padding: 5px 0 0 0;
+}
+#website-settings div {
+  width: 25px;
+  margin: auto;
+  text-align: center;
+  cursor: pointer;
+}
+#website-settings.dark-theme {
+  background-color: #333;
+}
+
 header {
-  width: 1150px;
+  padding: 0 120px 10px 120px;
   height: 50px;
-  margin: 20px auto 5px auto;
+  margin: 0 auto 0 auto;
   display: grid;
   grid-template-columns: auto auto;
+  background-color: #2222ff;
+}
+header.dark-theme {
+  background-color: #333;
 }
 header nav ul {
   list-style: none;
@@ -47,6 +66,9 @@ header nav ul li a:hover {
   color: #00e5fc;
   text-decoration: 2px underline wavy;
   transition: 0.3s;
+}
+header nav ul li a:hover.dark-theme {
+  color: #888;
 }
 header nav ul li .dropdown {
   position: relative;
@@ -87,8 +109,14 @@ header #right-nav {
 #container {
   display: grid;
   grid-template-columns: 350px auto;
-  width: 1150px;
   margin: auto;
+  border-bottom-left-radius: 600px;
+  border-bottom-right-radius: 200px;
+  padding: 0 120px;
+  background-color: #2222ff;
+}
+#container.dark-theme {
+  background-color: #333;
 }
 #container section {
   margin: 5px;
@@ -102,9 +130,12 @@ header #right-nav {
 }
 #container section figure img {
   width: 100%;
-  padding: 0px;
+  padding: 0;
   margin: 0;
   position: relative;
+}
+#container section figure.dark-theme {
+  background-color: #888;
 }
 #container section article {
   padding: 20px 0 10px 100px;
@@ -118,12 +149,18 @@ header #right-nav {
 #container section article h2 span {
   text-decoration: underline;
 }
+#container section article h2.dark-theme {
+  color: #888;
+}
 #container section article h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 5em;
   font-weight: 700;
   color: #00e5fc;
   margin: 0;
+}
+#container section article h1.dark-theme {
+  color: #cfcfcf;
 }
 #container section article p {
   color: white;
@@ -134,9 +171,20 @@ header #right-nav {
 #container section article p strong {
   color: #00e5fc;
 }
+#container section article p strong.dark-theme {
+  color: #888;
+}
 #container section article div {
   margin-top: 30px;
 }
+#container section article div a.dark-theme {
+  color: white;
+}
+#container section article div a.dark-theme:hover {
+  background-color: white;
+  color: #333;
+}
+
 footer {
   color: white;
   font-family: "Open Sans", serif;

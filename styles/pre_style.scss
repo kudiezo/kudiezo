@@ -2,11 +2,20 @@
 
 $title-font: "Montserrat", sans-serif;
 $text-font: "Open Sans", serif;
-$title-color: #00e5fc;
+
+$light-title-color: #00e5fc;
+$light-main-color: #2222ff;
+$alt-color: rgb(29, 12, 105);
+
+$dark-main-color: #333;
+$dark-title-color: #888;
+
 
 body {
-    background-color: #2222ff;
+    background-color: #fff;
+    margin: 0;
 }
+
 
 %button {
     color: white;
@@ -30,12 +39,30 @@ body {
     }
 }
 
+#website-settings {
+    background-color: $light-main-color;
+    padding: 5px 0 0 0;
+    div {
+        width: 25px;
+        margin: auto;
+        text-align: center;
+        cursor: pointer;
+    }
+    &.dark-theme {
+        background-color: $dark-main-color;
+    }
+}
+
 header {
-    width: 1150px;
+    padding: 0 120px 10px 120px;
     height: 50px;
-    margin: 20px auto 5px auto;
+    margin: 0 auto 0 auto;
     display: grid;
     grid-template-columns: auto auto;
+    background-color: $light-main-color;
+    &.dark-theme {
+        background-color: $dark-main-color;
+    }
 
     nav {
         ul {
@@ -56,9 +83,12 @@ header {
                         weight: bold;
                     }
                     &:hover {
-                        color: $title-color;
+                        color: $light-title-color;
                         text-decoration: 2px underline wavy;
                         transition: .3s;
+                        &.dark-theme {
+                            color: $dark-title-color;
+                        }
                     }
                 }
                 .dropdown {
@@ -104,6 +134,7 @@ header {
             }
         }
     }
+    
     #right-nav {
         text-align: right;
     }
@@ -112,14 +143,22 @@ header {
 #container {
     display: grid;
     grid-template-columns: 350px auto;
-    width: 1150px;
+    //width: 1150px;
     margin: auto;
+    //border: solid black;
+    border-bottom-left-radius: 600px;
+    border-bottom-right-radius: 200px;
+    padding: 0 120px;
+    background-color: $light-main-color;
+    &.dark-theme {
+        background-color: $dark-main-color;
+    }
    
     section {
         margin: 5px;
-        
+
         figure {
-            background-color: $title-color;
+            background-color: $light-title-color;
             margin: 20px 0;
             width: 300px;
             padding: 0 20px;
@@ -127,9 +166,12 @@ header {
 
             img {
                 width: 100%;
-                padding: 0px;
+                padding: 0;
                 margin: 0;
                 position: relative;
+            }
+            &.dark-theme {
+                background-color: $dark-title-color;
             }
         }
 
@@ -146,6 +188,9 @@ header {
                 span {
                     text-decoration: underline;
                 }
+                &.dark-theme {
+                    color: $dark-title-color;
+                }
             }
             h1 {
                 font: {
@@ -153,8 +198,11 @@ header {
                     size: 5em;
                     weight: 700;
                 }
-                color: $title-color;
+                color: $light-title-color;
                 margin: 0;
+                &.dark-theme {
+                    color: #cfcfcf;
+                }
             }
             p {
                 color: white;
@@ -164,7 +212,10 @@ header {
                 }
                 margin-top: 10px;
                 strong {
-                    color: $title-color;
+                    color: $light-title-color;
+                    &.dark-theme {
+                        color: $dark-title-color;
+                    }
                 }
             }
             div {
@@ -172,11 +223,18 @@ header {
 
                 a {
                     @extend %button;
+                    &.dark-theme {
+                        color: white;
+                        &:hover {
+                            background-color: white;
+                            color: $dark-main-color;
+                        }
+                    }
                 }
             }
         }
     }
-  
+    
 }
 
 footer {
