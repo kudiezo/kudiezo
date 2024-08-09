@@ -134,6 +134,9 @@ header #right-nav {
   margin: 0;
   position: relative;
 }
+#container section figure figcaption {
+  display: none;
+}
 #container section figure.dark-theme {
   background-color: #888;
 }

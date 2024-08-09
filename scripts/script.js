@@ -12,7 +12,7 @@ function applyTheme(theme) {
     const elementsToToggle = [websiteSettings, header, main, figure, h1, h2, ...btns];
 
     elementsToToggle.forEach(element => {
-        element.classList.toggle('dark-theme');
+        element.classList.toggle('dark-theme', isDarkTheme);
     });
    
     themeImg.src = isDarkTheme ? darkImgSrc : lightImgSrc;
@@ -25,6 +25,13 @@ function applyTheme(theme) {
 themeToggleBtn.addEventListener('click', () => {
     let theme = main.classList.contains('dark-theme') ? 'light' : 'dark';
     applyTheme(theme);
+    localStorage.setItem('theme', theme);
+    console.log(theme)
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    applyTheme(savedTheme);
 });
 
 const darkSvg = `
