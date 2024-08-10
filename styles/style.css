@@ -4,7 +4,7 @@ body {
   margin: 0;
 }
 
-#container section article div a, header nav ul li .dropdown a.button {
+#container section article div a, header div nav ul li .dropdown a.button {
   color: white;
   border-style: solid;
   border-width: 2px;
@@ -15,7 +15,7 @@ body {
   font-size: 1.1em;
   font-weight: bold;
 }
-#container section article div a:hover, header nav ul li .dropdown a.button:hover {
+#container section article div a:hover, header div nav ul li .dropdown a.button:hover {
   background-color: white;
   border-color: white;
   color: rgb(29, 12, 105);
@@ -25,8 +25,9 @@ body {
 #website-settings {
   background-color: #2222ff;
   padding: 5px 0 0 0;
+  display: flex;
 }
-#website-settings div {
+#website-settings div#theme-toggle {
   width: 25px;
   margin: auto;
   text-align: center;
@@ -37,51 +38,58 @@ body {
 }
 
 header {
-  padding: 0 120px 10px 120px;
-  height: 50px;
-  margin: 0 auto 0 auto;
-  display: grid;
-  grid-template-columns: auto auto;
   background-color: #2222ff;
+  padding-bottom: 30px;
 }
 header.dark-theme {
   background-color: #333;
 }
-header nav ul {
+header div {
+  display: flex;
+  flex-direction: row;
+}
+header div nav#brand {
+  margin-right: -130px;
+}
+header div nav {
+  margin: auto;
+}
+header div nav ul {
   list-style: none;
   padding: 0;
+  margin: 0 2px;
 }
-header nav ul li {
+header div nav ul li {
   display: inline-block;
   margin: auto 5px;
 }
-header nav ul li a {
+header div nav ul li a {
   text-decoration: none;
   padding: 7px;
   color: white;
   font-family: "Open Sans", serif;
   font-weight: bold;
 }
-header nav ul li a:hover {
+header div nav ul li a:hover {
   color: #00e5fc;
   text-decoration: 2px underline wavy;
   transition: 0.3s;
 }
-header nav ul li a:hover.dark-theme {
+header div nav ul li a:hover.dark-theme {
   color: #888;
 }
-header nav ul li .dropdown {
+header div nav ul li .dropdown {
   position: relative;
   display: block;
 }
-header nav ul li .dropdown:hover .dropdown-content {
+header div nav ul li .dropdown:hover .dropdown-content {
   display: block;
 }
-header nav ul li .dropdown a.button:hover {
+header div nav ul li .dropdown a.button:hover {
   text-decoration: none;
   transition: 0s;
 }
-header nav ul li .dropdown .dropdown-content {
+header div nav ul li .dropdown .dropdown-content {
   display: none;
   position: absolute;
   background-color: rgba(249, 249, 249, 0.5411764706);
@@ -92,17 +100,17 @@ header nav ul li .dropdown .dropdown-content {
   border-radius: 20px;
   right: 0;
 }
-header nav ul li .dropdown .dropdown-content a {
+header div nav ul li .dropdown .dropdown-content a {
   color: #1d0c69;
   padding: 12px 16px;
   text-decoration: none;
   border-radius: 20px;
   display: block;
 }
-header nav ul li .dropdown .dropdown-content a:hover {
+header div nav ul li .dropdown .dropdown-content a:hover {
   background-color: rgba(241, 241, 241, 0.6509803922);
 }
-header #right-nav {
+header div #right-nav {
   text-align: right;
 }
 
@@ -198,6 +206,60 @@ footer p {
 }
 footer a {
   color: black;
+}
+
+@media (max-width: 768px) {
+  #brand {
+    padding-bottom: 20px;
+    padding-top: 10px;
+    background-color: rgb(29, 12, 105);
+  }
+  .menu {
+    background-color: rgb(29, 12, 105);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease-in-out;
+  }
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .menu.active {
+    max-height: 500px;
+  }
+  #right-nav ul {
+    padding-top: 10px;
+    text-align: left;
+    padding-bottom: 25px;
+  }
+  #right-nav ul li .dropdown {
+    margin-top: 20px;
+    text-align: right;
+  }
+  header div {
+    display: block;
+  }
+  #website-settings {
+    background-color: rgb(29, 12, 105);
+  }
+  #website-settings div#theme-toggle {
+    margin-left: 15px;
+  }
+  #website-settings div#hamburguer {
+    margin-right: 15px;
+    width: 30px;
+    height: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  #website-settings div#hamburguer .line {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
