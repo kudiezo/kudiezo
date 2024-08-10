@@ -1,6 +1,6 @@
-const [themeToggleBtn, themeImg] = ["#theme-toggle", "#img-theme"].map(selector => document.querySelector(selector))
+const [themeToggleBtn, themeImg, mobileThemeImg] = ["#theme-toggle", "#img-theme", "#mobile-img-theme"].map(selector => document.querySelector(selector))
 
-const [websiteSettings, header, main, figure, h1, h2] = ["#website-settings", "header", "main", "figure", "h1", "h2"].map(selector => document.querySelector(selector))
+const [websiteSettings, header, main, figure, mobileFig, h1, h2, description, mobileMenu, mobileBrand] = ["#website-settings", "header", "main", "figure", ".mobile-figure", "h1", "h2", ".description", ".menu", "#brand"].map(selector => document.querySelector(selector))
 
 const btns = document.querySelectorAll("a.btn")
 
@@ -9,13 +9,15 @@ const [ lightImgSrc, darkImgSrc ] = [ "images/profile-picture-light.png", "image
 function applyTheme(theme) {
     const isDarkTheme = theme === 'dark'
     
-    const elementsToToggle = [websiteSettings, header, main, figure, h1, h2, ...btns]
+    const elementsToToggle = [websiteSettings, header, main, figure, mobileFig, h1, h2, description, mobileMenu, mobileBrand, ...btns]
 
     elementsToToggle.forEach(element => {
         element.classList.toggle('dark-theme', isDarkTheme)
+        
     })
    
     themeImg.src = isDarkTheme ? darkImgSrc : lightImgSrc
+    mobileThemeImg.src = isDarkTheme ? darkImgSrc : lightImgSrc
     if (theme === 'dark')
         themeToggleBtn.innerHTML = darkSvg
     else 
@@ -43,12 +45,16 @@ const lightSvg = `
 
 //########## Menu Hamburguer ################
 const hamburger = document.querySelector("#hamburguer")
+const hamburgerLines = document.querySelectorAll(".line")
 const navMenu = document.querySelectorAll(".menu")
-const brand = document.querySelector("#brand")
+//const brand = document.querySelector("#brand")
 
 hamburger.addEventListener("click", () => {
     navMenu.forEach(element => {
         element.classList.toggle("active")
     })
-    brand.classList.toggle("active")
+    hamburgerLines.forEach(element => {
+        element.classList.toggle("active")
+    })
+    //brand.classList.toggle("active")
 })
