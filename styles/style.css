@@ -271,6 +271,7 @@ footer a {
   }
   #website-settings div#hamburguer {
     margin-right: 15px;
+    margin-top: 3px;
     width: 30px;
     height: 21px;
     display: flex;
@@ -334,6 +335,7 @@ footer a {
     padding: 15px;
     background-color: rgb(29, 12, 105);
     border-radius: 20px;
+    margin: 0 20px;
   }
   #container section article p.dark-theme {
     background-color: #222;
