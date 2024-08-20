@@ -4,7 +4,7 @@ body {
   margin: 0;
 }
 
-#container section article div a, header div nav ul li .dropdown a.button {
+footer div a, #container section article div a, header div nav ul li .dropdown a.button {
   color: white;
   border-style: solid;
   border-width: 2px;
@@ -15,7 +15,7 @@ body {
   font-size: 1.1em;
   font-weight: bold;
 }
-#container section article div a:hover, header div nav ul li .dropdown a.button:hover {
+footer div a:hover, #container section article div a:hover, header div nav ul li .dropdown a.button:hover {
   background-color: white;
   border-color: white;
   color: rgb(29, 12, 105);
@@ -118,6 +118,7 @@ header div #right-nav {
   display: grid;
   grid-template-columns: 350px auto;
   margin: auto;
+  margin-bottom: 50px;
   border-bottom-left-radius: 600px;
   border-bottom-right-radius: 200px;
   padding: 0 120px;
@@ -199,16 +200,118 @@ header div #right-nav {
   color: #333;
 }
 
-footer {
-  color: white;
+aside.my-cv, aside.soft-skills, aside.hard-skills {
+  padding: 40px;
+  margin: 0 0 0 0;
+  display: grid;
+  grid-template-columns: 500px auto;
+}
+aside.my-cv div, aside.soft-skills div, aside.hard-skills div {
+  padding: 30px;
+}
+aside.my-cv .subtitle h2, aside.soft-skills .subtitle h2, aside.hard-skills .subtitle h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 4em;
+  font-weight: 450;
+  margin: 0;
+}
+aside.my-cv .subtitle p, aside.soft-skills .subtitle p, aside.hard-skills .subtitle p {
+  color: #555;
   font-family: "Open Sans", serif;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+aside.my-cv .subtitle-content, aside.soft-skills .subtitle-content, aside.hard-skills .subtitle-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+aside.my-cv .subtitle-content .skills, aside.soft-skills .subtitle-content .skills, aside.hard-skills .subtitle-content .skills {
+  padding: 15px 25px;
+  border: 1px solid #555;
+  border-radius: 35px;
+  margin: 10px;
+  color: #555;
+  font-family: "Open Sans", serif;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+aside.my-cv .subtitle-content .skills:hover, aside.soft-skills .subtitle-content .skills:hover, aside.hard-skills .subtitle-content .skills:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+aside.hard-skills {
+  background-color: #eee;
+}
+
+aside.my-cv {
+  display: inline-block;
+  background-color: #eee;
+  text-align: center;
+  width: 100%;
+  padding: 30px 0;
+}
+aside.my-cv .subtitle {
+  padding-bottom: 0;
+}
+aside.my-cv .subtitle h2 {
+  font-size: 3em;
+  color: rgb(145, 58, 58);
+}
+aside.my-cv .subtitle-content form {
+  width: 100%;
+}
+aside.my-cv .subtitle-content form input {
+  display: block;
+  width: 600px;
+  padding: 20PX;
+  margin: 10px auto;
+  border-radius: 5px;
+  border: 3px solid;
+  font-family: "Open Sans", serif;
+  font-size: 1.2em;
+}
+aside.my-cv .subtitle-content form .btn-submit {
+  width: 200px;
+  cursor: pointer;
+  border: 1px solid;
+  background-color: #333;
+  color: white;
+}
+aside.my-cv .subtitle-content form .btn-submit:hover {
+  background-color: rgb(29, 12, 105);
+}
+
+footer {
+  background-color: rgb(29, 12, 105);
+  color: white;
+  padding: 40px 30px;
+  font-family: "Open Sans", serif;
+}
+footer div {
+  display: flex;
+  justify-content: center;
+}
+footer div a {
+  margin: 10px;
+}
+footer div a.dark-theme {
+  color: white;
+}
+footer div a.dark-theme:hover {
+  background-color: white;
+  color: #333;
 }
 footer p {
   font-size: 9pt;
-  margin: 0;
+  text-align: right;
 }
-footer a {
-  color: black;
+footer p a {
+  font-weight: bold;
+  color: white;
+}
+footer.dark-theme {
+  background-color: #222;
 }
 
 @media (max-width: 768px) {
@@ -303,6 +406,7 @@ footer a {
     flex-wrap: wrap;
     padding: 0 0 50px 0;
     margin: 0;
+    margin-bottom: 40px;
     text-align: center;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 50px;
@@ -339,6 +443,29 @@ footer a {
   }
   #container section article p.dark-theme {
     background-color: #222;
+  }
+  aside.hard-skills, aside.soft-skills {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  aside.hard-skills .subtitle, aside.soft-skills .subtitle {
+    margin: 0;
+    padding: 0;
+  }
+  aside.hard-skills .subtitle-content, aside.soft-skills .subtitle-content {
+    padding: 0;
+    margin: 0;
+  }
+  aside.hard-skills .subtitle-content span.skills, aside.soft-skills .subtitle-content span.skills {
+    margin-left: 0;
+  }
+  aside.my-cv .subtitle-content form {
+    margin: 0;
+    position: relative;
+  }
+  aside.my-cv .subtitle-content form input#email {
+    margin: auto;
+    width: 90%;
   }
 }
 
