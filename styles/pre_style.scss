@@ -13,7 +13,9 @@ $subtitle-size: 4em;
 $dark-main-color: #333;
 $dark-title-color: #888;
 
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: #fff;
     margin: 0;
@@ -72,10 +74,11 @@ header {
         flex-direction: row;
 
         nav#brand {
-            margin-right: -130px;
+            //margin-right: -130px;
         }
         nav {
             margin: auto;
+            margin-top: 5px;
             ul {
                 list-style: none;
                 padding: 0;
@@ -149,6 +152,9 @@ header {
         
         #right-nav {
             text-align: right;
+            ul > li > a.website-lang {
+                color: orange;
+            }
         }
     }
 }

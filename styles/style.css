@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #fff;
   margin: 0;
@@ -48,11 +52,9 @@ header div {
   display: flex;
   flex-direction: row;
 }
-header div nav#brand {
-  margin-right: -130px;
-}
 header div nav {
   margin: auto;
+  margin-top: 5px;
 }
 header div nav ul {
   list-style: none;
@@ -112,6 +114,9 @@ header div nav ul li .dropdown .dropdown-content a:hover {
 }
 header div #right-nav {
   text-align: right;
+}
+header div #right-nav ul > li > a.website-lang {
+  color: orange;
 }
 
 #container {
