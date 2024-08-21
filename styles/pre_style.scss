@@ -549,6 +549,10 @@ footer {
         .subtitle {
             margin: 0;
             padding: 0;
+            h2 {
+                font-size: 2.5em;
+            }
+            
         }
         .subtitle-content {
             padding: 0;
@@ -559,7 +563,12 @@ footer {
         }
     }
     aside.my-cv {
-        
+        .subtitle {
+            h2 {
+                font-size: 2em;
+            }
+            
+        }
         .subtitle-content {
             form {
                 margin: 0;

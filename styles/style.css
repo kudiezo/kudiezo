@@ -452,12 +452,18 @@ footer.dark-theme {
     margin: 0;
     padding: 0;
   }
+  aside.hard-skills .subtitle h2, aside.soft-skills .subtitle h2 {
+    font-size: 2.5em;
+  }
   aside.hard-skills .subtitle-content, aside.soft-skills .subtitle-content {
     padding: 0;
     margin: 0;
   }
   aside.hard-skills .subtitle-content span.skills, aside.soft-skills .subtitle-content span.skills {
     margin-left: 0;
+  }
+  aside.my-cv .subtitle h2 {
+    font-size: 2em;
   }
   aside.my-cv .subtitle-content form {
     margin: 0;
