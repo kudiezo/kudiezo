@@ -34,7 +34,17 @@ footer div a:hover, #container section article div a:hover, header div nav ul li
 #website-settings div#theme-toggle {
   width: 25px;
   margin: auto;
+  margin-right: 10px;
   text-align: center;
+  cursor: pointer;
+}
+#website-settings div#website-lang {
+  width: 25px;
+  margin: auto;
+  margin-left: 10px;
+  color: orange;
+  font-family: "Open Sans", serif;
+  font-size: 1.2em;
   cursor: pointer;
 }
 #website-settings.dark-theme {
@@ -54,7 +64,7 @@ header div {
 }
 header div nav {
   margin: auto;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 header div nav ul {
   list-style: none;
@@ -111,12 +121,6 @@ header div nav ul li .dropdown .dropdown-content a {
 }
 header div nav ul li .dropdown .dropdown-content a:hover {
   background-color: rgba(241, 241, 241, 0.6509803922);
-}
-header div #right-nav {
-  text-align: right;
-}
-header div #right-nav ul > li > a.website-lang {
-  color: orange;
 }
 
 #container {
@@ -335,6 +339,7 @@ footer.dark-theme {
     z-index: 1000;
   }
   .menu {
+    margin-top: 0;
     background-color: rgb(29, 12, 105);
     max-height: 0;
     overflow: hidden;

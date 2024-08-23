@@ -52,7 +52,20 @@ body {
     div#theme-toggle {
         width: 25px;
         margin: auto;
+        margin-right: 10px;
         text-align: center;
+        cursor: pointer;
+    }
+
+    div#website-lang {
+        width: 25px;
+        margin: auto;
+        margin-left: 10px;
+        color: orange;
+        font: {
+            family: $text-font;
+            size: $text-size;
+        }
         cursor: pointer;
     }
 
@@ -78,7 +91,7 @@ header {
         }
         nav {
             margin: auto;
-            margin-top: 5px;
+            margin-top: 10px;
             ul {
                 list-style: none;
                 padding: 0;
@@ -150,12 +163,12 @@ header {
             }
         }
         
-        #right-nav {
-            text-align: right;
-            ul > li > a.website-lang {
-                color: orange;
-            }
-        }
+        // #right-nav {
+        //     text-align: right;
+        //     ul > li > a.website-lang {
+        //         color: orange;
+        //     }
+        // }
     }
 }
 
@@ -420,6 +433,7 @@ footer {
         z-index: 1000;
     }
     .menu {
+        margin-top: 0;
         background-color: $alt-color;
         max-height: 0;
         overflow: hidden;
